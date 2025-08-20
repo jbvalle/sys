@@ -1,7 +1,4 @@
-#include "stm32f401re_regs.h"
-
-#define MODER_WIDTH 2
-
+#include "gpio.h"
 
 void wait_ms(int time){
     for(int i = 0; i < time; i++){
@@ -12,14 +9,9 @@ void wait_ms(int time){
 
 int main(void){
 
-    RCC->AHB1ENR |= 1;
-
-    GPIOA->MODER &= ~(3 << (5 * MODER_WIDTH));
-    GPIOA->MODER |=  (1 << (5 * MODER_WIDTH));
+    gpio_init(GpioConfig, GpioConfigCount);
 
     for(;;){
-        GPIOA->ODR ^= (1 << 5);
-        wait_ms(100);
     }
     return 0;
 }
