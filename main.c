@@ -12,7 +12,7 @@ int main(void){
 
     gpio_init(GpioConfig, GpioConfigCount);
     systick_init(&SysTickConfig);
-    SysTick_SetCallback(0, SysTick_Callback_Channel0);
+    //SysTick_SetCallback(0, SysTick_Callback_Channel0);
 
     for(;;){
     }
