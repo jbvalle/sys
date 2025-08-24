@@ -19,7 +19,7 @@ void UsuageFault_handler    (void)__attribute__((weak, alias("Default_handler"))
 void SVCall_handler         (void)__attribute__((weak, alias("Default_handler")));
 void DebugMonitor_handler   (void)__attribute__((weak, alias("Default_handler")));
 void PendSV_handler         (void)__attribute__((weak, alias("Default_handler")));
-void Systick_handler        (void)__attribute__((weak, alias("Default_handler")));
+extern void Systick_handler        (void)__attribute__((weak, alias("Default_handler")));
 void WWDG_handler                 (void)__attribute__((weak, alias("Default_handler")));
 void EXITI16_PVD__handler         (void)__attribute__((weak, alias("Default_handler")));
 void EXITI21_TAMP_STAMP_handler   (void)__attribute__((weak, alias("Default_handler")));
