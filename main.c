@@ -8,6 +8,18 @@ void wait_ms(int time){
 }
 
 
+void task_1ms_handler(void){
+    for(;;);
+}
+
+void task_50ms_handler(void){
+    for(;;);
+}
+
+void task_100ms_handler(void){
+    for(;;);
+}
+
 int main(void){
 
     gpio_init(GpioConfig, GpioConfigCount);
